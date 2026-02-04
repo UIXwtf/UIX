@@ -1,12 +1,20 @@
-import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs' // nextra-theme-blog or your custom theme
+import { useMDXComponents as getNextraComponents } from 'nextra/mdx-components'
+import { TOC } from '../app/_components/toc'
  
-// Get the default MDX components
-const themeComponents = getThemeComponents()
- 
-// Merge components
-export function useMDXComponents(components) {
-  return {
-    ...themeComponents,
-    ...components
+const defaultComponents = getNextraComponents({
+  wrapper({ children, navigation, toc }) {
+    return (
+      <>
+          <div className={'test'}>
+            <div className={'test2'}>{children}</div>
+            <TOC toc={toc} />
+          </div>
+      </>
+    )
   }
-}
+})
+ 
+export const useMDXComponents = components => ({
+  ...defaultComponents,
+  ...components
+})

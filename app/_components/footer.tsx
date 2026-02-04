@@ -1,13 +1,9 @@
-import type { FC, ComponentProps } from 'react'
-import styles from './footer.module.css'
+import type { FC } from 'react'
  
-export const Footer: FC<ComponentProps<'footer'>> = () => {
+export const Footer: FC = () => {
   return (
-    <footer style={{
-        background: 'lightgreen',
-        padding: 20
-      }}>
-      Создано Nextra {new Date().getFullYear()}
+    <footer className={'container bt'}>
+      Powered by Nextra {new Date().getFullYear()}
     </footer>
   )
 }
