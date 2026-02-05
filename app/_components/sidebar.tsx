@@ -22,13 +22,13 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
               item.route || ('href' in item ? (item.href as string) : '')
             const { title } = item
             return (
-              <li key={route} className={'f-16'} >
+              <li key={route} className={'f-14'} >
                 {'children' in item ? (
                   <details>
-                    <summary className={'flex menuItem'}>
+                    <summary className={'flex menuItem f-semibold'} style={{color: '#000'}}>
                       {title}
                       <svg viewBox="0 0 16 16" height="16" width="16">
-                        <path fill="currentColor" fillRule="evenodd" d="m14.06 5.5-.53.53-4.82 4.82a1 1 0 0 1-1.42 0L2.47 6.03l-.53-.53L3 4.44l.53.53L8 9.44l4.47-4.47.53-.53z" clip-rule="evenodd"></path>
+                        <path fill="currentColor" fillRule="evenodd" d="m14.06 5.5-.53.53-4.82 4.82a1 1 0 0 1-1.42 0L2.47 6.03l-.53-.53L3 4.44l.53.53L8 9.44l4.47-4.47.53-.53z" clipRule="evenodd"></path>
                       </svg>
                     </summary>
                     <div className={'subMenu'}>{item.children.map(child => renderItem(child))}</div>

@@ -5,12 +5,11 @@ import type { FC, ReactNode } from 'react'
 import { NextraTheme } from './_components/nextra-theme'
 import 'nextra-theme-docs/style.css'
 import './_components/uix-docs-theme/global.css'
-import { Layout } from 'nextra-theme-docs'
  
 export const metadata: Metadata = {
   title: {
     absolute: '',
-    template: '%s - Nextra'
+    template: '%s - Nextra1'
   }
 }
 const RootLayout: FC<{ children: ReactNode }> = async ({ children }) => {
@@ -19,7 +18,9 @@ const RootLayout: FC<{ children: ReactNode }> = async ({ children }) => {
     <html lang="en" dir="ltr">
       <Head faviconGlyph="✦" />
       <body>
-        <NextraTheme pageMap={pageMap}>{children}</NextraTheme>
+        <NextraTheme pageMap={pageMap}>
+          {children}
+        </NextraTheme>
       </body>
     </html>
   )
