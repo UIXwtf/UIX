@@ -1,0 +1,19 @@
+.li details summary {
+    color: hsla(0, 0%, 0%, 0.8);
+}
+
+.li details:open svg {
+    transform: rotate(-90deg);
+}
+
+.li a:hover {
+    color:  hsla(194, 100%, 39%, 0.8);
+}
+
+.active a {
+    color:  hsla(194, 100%, 39%, 0.8);
+}
+
+.li details .active a {
+    background-color: hsla(180, 100%, 66%, 0.1);
+}
