@@ -17,7 +17,8 @@ export const Navbar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
  
   return (
     
-    <ul style={{display: 'flex', listStyleType: 'none', gap: 20, margin: 0}}>
+    <ul style={{display: 'flex', listStyleType: 'none', gap: 20, margin: 0, background: '#ff0000'}}>
+        Test navBar
         <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
         {topLevelNavbarItems.map(item => {
             const route = item.route || ('href' in item ? item.href! : '')

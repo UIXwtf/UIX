@@ -1,0 +1,13 @@
+.breadcrumbs {
+    padding-bottom: 8px;
+    display: flex;
+    gap: 8;
+}
+.breadcrumbs span {
+    display: flex;
+    gap: 8;
+    align-items: center;
+}
+.breadcrumbs a:hover {
+    color: hsl(223, 70%, 4%);
+}

@@ -5,7 +5,7 @@ import type { PageMapItem } from 'nextra'
 import { Anchor } from 'nextra/components'
 import { normalizePages } from 'nextra/normalize-pages'
 import type { FC } from 'react'
-import styles from './styles.module.css';
+import styles from './styles.module.css'
  
 const getIsActive = (item, pathname) => {
   if (!item.frontMatter) {
@@ -48,11 +48,11 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
     return (
       <li
         key={route}
-        className={`f-14  ${styles.li} ${getIsActive(item, pathname) ? styles.active : ""}`}
+        className={`f-14 ${styles.li} ${getIsActive(item, pathname) ? styles.active : ""}`}
       >
         {"children" in item ? (
           <details>
-            <summary className={"flex f-12 menuItem testFont jc-space-between"}>
+            <summary className={"flex f-12 menuItem title jc-space-between"}>
               {title}
               {arrow}
             </summary>

@@ -9,7 +9,7 @@ body {
     font-family: "Inter", sans-serif;
     color: #364153;
 }
-.testFont {
+.title {
     font-family: "JetBrains Mono", monospace;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -50,12 +50,19 @@ body {
     font-size: .75rem;
     line-height: 1rem;
 }
+.f-10 {
+    font-size: .625rem;
+    line-height: .875rem;
+}
 .f-semibold {
     font-weight: 500;
 }
 
 .me-auto {
     margin-inline-end: auto;
+}
+.ml-auto {
+    margin-left: auto;
 }
 .bt {
     border-top: 1px solid #ebebeb;
@@ -72,6 +79,12 @@ body {
 .jc-space-between {
     justify-content: space-between;
 }
+.ai-end {
+    align-items: flex-end;
+}
+.ai-start {
+    align-items: flex-start;
+}
 
 header {
     position: sticky;
@@ -86,7 +99,7 @@ nav {
     height: 100%;
     align-items: center;
     padding: 0 1.5rem;
-    gap: 1rem;
+    gap: .5rem;
 }
 aside {
     width: 256px;
@@ -130,7 +143,7 @@ aside {
     min-height: calc(100vh - 64px);
     padding: 32px 40px 60px;
 }
-.content a {
+.description a {
     font-weight: 500;
     color: #030712;
     text-underline-offset: 3px;
@@ -138,16 +151,8 @@ aside {
     text-decoration-color: #2d81e0;
     text-decoration-thickness: 1px;
 }
-.content a:hover {
+.description a:hover {
     text-decoration-thickness: 2px;
-}
-.navLinks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 24px;
-    margin-top: 56px;
-    border-top: 1px solid #ebebeb;
 }
 .linkItem {
     display: flex;
@@ -160,23 +165,10 @@ aside {
     align-items: flex-start;
     margin-left: auto;
 }
-.navLink {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 2px;
-    font-weight: 500;
-    color:#000000;
-}
 .footnote {
     font-size: 12px;
 }
-.breadcrumbs {
-    padding-bottom: 8px;
-    display: flex;
-    gap: 10;
-    font-size: .875rem;
-}
+
 .feature-card {
     border: 1px solid #000;
     padding: 20px;
@@ -187,4 +179,18 @@ aside {
 .overflowY {
     overflow-y: auto;
     height: calc(100svh - 16vh);
+}
+
+.button {
+    background-color: #f2f2f2;
+    height: 36px;
+    padding-right: 6px;
+    padding-left: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover {
+    background-color: #ebebeb;
 }
