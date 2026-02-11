@@ -1,0 +1,34 @@
+.li details summary {
+    color: hsla(0, 0%, 0%, 0.8);
+}
+
+.li details:open svg {
+    transform: rotate(-90deg);
+}
+
+.li details a {
+    color: #4a5565;
+    padding-left: 16px;
+    border-left: 1px solid #ebebeb;
+    margin-left: -1px;
+}
+.li details a::before {
+    content: none !important;
+}
+.li details a:hover {
+    color:  hsla(224, 71%, 4%, 1);
+    border-left: 1px solid hsla(224, 72%, 4%, .25);
+}
+
+.active a {
+    color: hsla(224, 71%, 4%, 1) !important;
+    font-weight: 600;
+}
+
+.li details .active a {
+    border-left: 1px solid hsla(224, 72%, 4%, 1) !important;
+}
+
+/*.li details .active a {
+    background-color: hsla(180, 100%, 66%, 0.1);
+}*/

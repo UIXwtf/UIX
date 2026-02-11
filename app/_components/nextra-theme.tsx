@@ -1,10 +1,10 @@
 import type { PageMapItem } from 'nextra'
-import { version } from 'nextra/package.json'
 import type { FC, ReactNode } from 'react'
 import { Footer } from './footer'
 import { Navbar } from './navbar'
-import { Sidebar } from './sidebar'
+import { Sidebar } from './sidebar//sidebar'
 import { Search } from 'nextra/components'
+
  
 export const NextraTheme: FC<{
     children: ReactNode

@@ -1,5 +1,14 @@
 export default {
-    index: 'О дизайн-системе',
-    tokens: 'Токены',
-    components: 'Компоненты',
+    index: {
+        title: 'О дизайн-системе',
+        type: 'doc'
+    },
+    tokens: {
+        title: 'Токены',
+        type: 'doc'
+    },
+    components: {
+        title: 'Компоненты',
+        type: 'doc'
+    }
 }
