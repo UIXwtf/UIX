@@ -1,17 +1,18 @@
 import type { PageMapItem } from 'nextra'
 import type { FC, ReactNode } from 'react'
+import { Banner } from 'nextra/components'
 import { Footer } from './footer'
-import { Navbar } from './navbar'
+import { Navbar } from './navbar/navbar'
 import { Sidebar } from './sidebar/sidebar'
 import { Search } from 'nextra/components'
 
- 
 export const NextraTheme: FC<{
     children: ReactNode
     pageMap: PageMapItem[]
 }> = ({ children, pageMap }) => {
     return (
     <>
+    <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
     <header>
         <nav className={'container'}>
             <a className={'me-auto'} href='uix.wtf' target='_blank'>
@@ -35,11 +36,10 @@ export const NextraTheme: FC<{
             </a>
         </nav>
     </header>
-    
-        <div className={'container'}>
-            <Sidebar pageMap={pageMap} />
-            {children}
-        </div>
+    <div className={'container'}>
+        <Sidebar pageMap={pageMap} />
+        {children}
+    </div>
     <Footer />
     </>
     )

@@ -2,10 +2,10 @@
  
 import { usePathname } from 'next/navigation'
 import type { PageMapItem } from 'nextra'
-import { Banner } from 'nextra/components'
 import { Anchor } from 'nextra/components'
 import { normalizePages } from 'nextra/normalize-pages'
 import type { FC } from 'react'
+import styles from './styles.module.css'
 
 
 export const Navbar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
@@ -17,14 +17,12 @@ export const Navbar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
  
   return (
     
-    <ul style={{display: 'flex', listStyleType: 'none', gap: 20, margin: 0, background: '#ff0000'}}>
-        Test navBar
-        <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
+    <ul className={`f-14 flex ${styles.navBar}`}>
         {topLevelNavbarItems.map(item => {
             const route = item.route || ('href' in item ? item.href! : '')
             return (
                 <li key={route}>
-                    <Anchor href={route} style={{ textDecoration: 'none' }}>
+                    <Anchor href={route}>
                         {item.title}
                     </Anchor>
                 </li>

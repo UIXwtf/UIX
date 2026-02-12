@@ -1,16 +1,17 @@
 import type { Heading } from 'nextra'
 import { Anchor } from 'nextra/components'
 import type { FC } from 'react'
+import styles from './styles.module.css'
  
 export const TOC: FC<{ toc: Heading[] }> = ({ toc }) => {
   return (
-    <aside className={'bl'}>
-      <div className={'menu'}>
+    <aside>
+      <div className={`${styles.tocMenu}`}>
         <div className={'f-12 f-semibold title'}>Содержание</div>
-        <ul className={'listItem overflowY bb'} style={{marginTop: 8}}>
+        <ul className={`${styles.overflowY}`}>
           {toc.map(heading => (
-            <li className={'flex f-14 tocItem'} key={heading.id}>
-              <Anchor href={`#${heading.id}`}>{heading.value}</Anchor>
+            <li key={heading.id}>
+              <Anchor href={`#${heading.id}`} className={`flex f-14 ${styles.tocItem}`}>{heading.value}</Anchor>
             </li>
           ))}
         </ul>

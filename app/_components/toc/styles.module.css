@@ -1,0 +1,25 @@
+.tocMenu {
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+    position: sticky;
+    top: 64px;
+    padding-top: 32px;
+    padding-right: 24px;
+}
+.overflowY {
+    margin-top: 12px;
+    border-left: 1px solid #ebebeb;
+}
+.tocItem {
+    align-items: center;
+    min-height: 24px;
+    padding-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: -1px;
+    border-left: 1px solid #ebebeb;
+}
+.tocItem:hover {
+    color:  hsla(224, 71%, 4%, 1);
+    border-left: 1px solid hsla(224, 72%, 4%, .25);
+}
