@@ -1,8 +1,13 @@
+import { AddIcon } from '../app/_components/addicon/addicon'
+import { KeyFramesIcon } from '../public/icon'
+
 export default {
-    index: {
-        title: 'О дизайн-системе',
-        type: 'doc'
-    },
+    index: (
+    <AddIcon>
+      <KeyFramesIcon />
+      О дизайн-системе
+    </AddIcon>
+    ),
     tokens: {
         title: 'Токены',
         type: 'doc'
@@ -17,22 +22,22 @@ export default {
         items: {
             docs: {
                 title: 'Docs Starter repo',
-                href: 'https://github.com/phucbm/nextra-docs-starter',
+                href: 'https://ya.ru',
             },
             blog: {
                 title: 'Blog Starter repo',
-                href: 'https://github.com/phucbm/nextra-blog-starter'
+                href: 'https://google.ru'
             }
         }
     },
-    contact: {
+    contact1: {
         title: 'Menu URL',
         type: 'page',
-        href: 'https://github.com/phucbm/nextra-blog-starter'
+        href: 'https://ya.ru'
     },
     blog: {
         title: 'Блог',
         type: 'page',
-        href: 'https://github.com/phucbm/nextra-blog-starter'
+        href: 'https://google.ru'
     },
 }

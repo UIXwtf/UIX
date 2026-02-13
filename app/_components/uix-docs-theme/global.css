@@ -44,7 +44,7 @@ body {
 }
 .f-14 {
     font-size: .875rem;
-    line-height: 1.25rem;
+    /*line-height: 1.25rem;*/
 }
 .f-12 {
     font-size: .75rem;
@@ -133,6 +133,9 @@ aside {
     padding: 0;
     margin: 0;
 }
+.listItem > li:first-child {
+    margin-bottom: 8px;
+}
 .menuItem {
     align-items: center;
     height: 24px;
@@ -140,8 +143,8 @@ aside {
     gap: 8px;
 }
 .menuItem:hover {
-    color: #000;
-    cursor: pointer;
+    color: #030711;
+
 }
 .subMenu {
     margin-top: 12px;

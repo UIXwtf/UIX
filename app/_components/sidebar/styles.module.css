@@ -16,19 +16,16 @@
     content: none !important;
 }
 .li details a:hover {
-    color:  hsla(224, 71%, 4%, 1);
     border-left: 1px solid hsla(224, 72%, 4%, .25);
 }
 
-.active a {
+.active a,
+.active a svg {
     color: hsla(224, 71%, 4%, 1) !important;
     font-weight: 600;
+    letter-spacing: .2px;
 }
 
 .li details .active a {
     border-left: 1px solid hsla(224, 72%, 4%, 1) !important;
 }
-
-/*.li details .active a {
-    background-color: hsla(180, 100%, 66%, 0.1);
-}*/

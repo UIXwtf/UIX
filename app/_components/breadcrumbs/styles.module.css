@@ -11,3 +11,6 @@
 .breadcrumbs a:hover {
     color: hsl(223, 70%, 4%);
 }
+.breadcrumbs svg {
+    display: none;
+}
