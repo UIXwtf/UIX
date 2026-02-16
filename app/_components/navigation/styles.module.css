@@ -4,10 +4,7 @@
     padding-top: 24px;
 }
 
-.link:hover > div .name {
-    color: #030711;
-}
-
+.link:hover > div .name,
 .link:hover > svg {
     color: #030711;
 }
@@ -20,7 +17,6 @@
 .name {
     margin-top: 8px;
     font-size: 1.375rem;
-    font-weight: 500;
     line-height: 1.625rem;
 }
 .name svg {

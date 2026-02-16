@@ -13,9 +13,7 @@ body {
     font-family: "JetBrains Mono", monospace;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    font-weight: 700 !important;
-    font-style: normal;
-    margin: 8px 0 0px 0 !important;
+    font-weight: 700;
     color: #6a7282 !important;
 }
 .container {
@@ -121,34 +119,6 @@ nav {
 aside {
     width: 256px;
     flex-shrink: 0;
-}
-.menu {
-    position: sticky;
-    top: 64px;
-    height: calc(100vh - 64px);
-    padding: 32px 24px 24px 24px;
-}
-.listItem {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.listItem > li:first-child {
-    margin-bottom: 8px;
-}
-.menuItem {
-    align-items: center;
-    height: 24px;
-    margin: 8px 0;
-    gap: 8px;
-}
-.menuItem:hover {
-    color: #030711;
-
-}
-.subMenu {
-    margin-top: 12px;
-    border-left: 1px solid #ebebeb;
 }
 .content {
     flex-grow: 1;

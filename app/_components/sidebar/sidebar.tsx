@@ -52,16 +52,16 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
       >
         {"children" in item ? (
           <details>
-            <summary className={"flex f-12 menuItem title jc-space-between"}>
+            <summary className={`flex f-12 title jc-space-between ${styles.catItem}`}>
               {title}
               {arrow}
             </summary>
-            <div className={'subMenu'}>
+            <div className={`bl ${styles.subMenu}`}>
               {item.children.map((child) => renderItem(child))}
             </div>
           </details>
         ) : (
-          <Anchor href={route} className={"flex menuItem"}>
+          <Anchor href={route} className={`flex ${styles.menuItem}`}>
             {title}
           </Anchor>
         )}
@@ -71,8 +71,8 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
  
   return (
     <aside className={'br'}>
-      <div className={'menu'}>
-        <ul className={'flex flex-d-col listItem'}>
+      <div className={`${styles.menu}`}>
+        <ul className={`flex flex-d-col ${styles.listItem}`}>
           {docsDirectories.map((i) => renderItem(i))}
         </ul>
       </div>

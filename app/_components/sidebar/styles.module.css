@@ -1,5 +1,21 @@
-.li details summary {
-    color: hsla(0, 0%, 0%, 0.8);
+.menu {
+    position: sticky;
+    top: 64px;
+    height: calc(100vh - 64px);
+    padding: 32px 24px 24px 24px;
+}
+
+.listItem {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.listItem > li:first-child {
+    margin-bottom: .5rem;
+}
+
+.subMenu {
+    margin-top: .75rem;
 }
 
 .li details:open svg {
@@ -17,6 +33,23 @@
 }
 .li details a:hover {
     border-left: 1px solid hsla(224, 72%, 4%, .25);
+}
+
+.catItem {
+    align-items: center;
+    height: 24px;
+    gap: 8px;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+
+.menuItem {
+    align-items: center;
+    height: 24px;
+    margin: 8px 0;
+}
+.menuItem:hover {
+    color: #030711;
 }
 
 .active a,

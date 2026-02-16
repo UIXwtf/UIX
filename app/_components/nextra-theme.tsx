@@ -9,7 +9,7 @@ import { Search } from 'nextra/components'
 export const NextraTheme: FC<{
     children: ReactNode
     pageMap: PageMapItem[]
-}> = ({ children, pageMap }) => {
+}> = ({ children, pageMap}) => {
     return (
     <>
     <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>

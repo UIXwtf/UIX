@@ -7,7 +7,7 @@ export const TOC: FC<{ toc: Heading[] }> = ({ toc }) => {
   return (
     <aside>
       <div className={`${styles.tocMenu}`}>
-        <div className={'f-12 f-semibold title'}>Содержание</div>
+        <div className={'f-12 title'}>Содержание</div>
         <ul className={`${styles.overflowY}`}>
           {toc.map(heading => (
             <li key={heading.id}>
