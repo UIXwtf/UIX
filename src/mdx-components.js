@@ -4,7 +4,7 @@ import { TOC } from '../app/_components/toc/toc'
 import { Breadcrumbs } from '../app/_components/breadcrumbs/breadcrumbs'
 import { Navigation } from '../app/_components/navigation/navigation'
 import { getPageMap } from 'nextra/page-map';
- 
+
 const themeComponents = getThemeComponents();
 
 const defaultComponents = getNextraComponents({
