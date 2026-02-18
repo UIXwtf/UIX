@@ -1,25 +1,27 @@
-'use client'
- 
-import { usePathname } from "next/navigation"
-import type { PageMapItem } from 'nextra'
-import { Anchor } from 'nextra/components'
-import { normalizePages } from 'nextra/normalize-pages'
-import type { FC } from 'react'
-import styles from './styles.module.css'
- 
+"use client";
+
+import { usePathname } from "next/navigation";
+import type { PageMapItem } from "nextra";
+import { Anchor } from "nextra/components";
+import { normalizePages } from "nextra/normalize-pages";
+import type { FC } from "react";
+import styles from "./styles.module.css";
+
 const getIsActive = (item, pathname) => {
   if (!item.frontMatter) {
     return false;
   }
 
-  const href = "/" + item.frontMatter.filePath
-    .split("/")
-    .slice(1)
-    .join("/")
-    .replace(/\.\w+$/, "");
+  const href =
+    "/" +
+    item.frontMatter.filePath
+      .split("/")
+      .slice(1)
+      .join("/")
+      .replace(/\.\w+$/, "");
 
-  if (pathname === '/') {
-    return href === '/index';
+  if (pathname === "/") {
+    return href === "/index";
   }
   return pathname === href;
 };
@@ -39,7 +41,7 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
   const pathname = usePathname();
   const { docsDirectories } = normalizePages({
     list: pageMap,
-    route: pathname
+    route: pathname,
   });
 
   const renderItem = (item) => {
@@ -51,8 +53,10 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
         className={`f-14 ${styles.li} ${getIsActive(item, pathname) ? styles.active : ""}`}
       >
         {"children" in item ? (
-          <details>
-            <summary className={`flex f-12 title jc-space-between ${styles.catItem}`}>
+          <details open={true}>
+            <summary
+              className={`flex f-12 title jc-space-between ${styles.catItem}`}
+            >
               {title}
               {arrow}
             </summary>
@@ -68,14 +72,14 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
       </li>
     );
   };
- 
+
   return (
-    <aside className={'br'}>
+    <aside className={"br"}>
       <div className={`${styles.menu}`}>
         <ul className={`flex flex-d-col ${styles.listItem}`}>
           {docsDirectories.map((i) => renderItem(i))}
         </ul>
       </div>
     </aside>
-  )
-}
+  );
+};
